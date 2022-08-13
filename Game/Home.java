@@ -9,8 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Home extends World
 {
-    public static int comida = 0;
+    
     String nombre;
+    Minijuego mj = new Minijuego(nombre, this);
     
     /**
      * Constructor para Home.
@@ -24,7 +25,7 @@ public class Home extends World
         Pet p1 = new Pet();
         addObject(p1, 372,494); //Añade una mascota a la pantalla.
         
-        MJ Play = new MJ(new Minijuego(nombre, this));
+        MJ Play = new MJ(mj);
         addObject (Play, 904, 76); //Botón para dirigirse al Minijuego.
     }
     
@@ -36,7 +37,7 @@ public class Home extends World
             String nombre = Greenfoot.ask("¿Qué nombre deseas darle?");
             this.nombre = nombre; //Recibe un dato de nombre para la mascota.
         }
-        showText("Comida: " + comida, 200,50); //Registra el dato de comida recolectada y lo muestra en pantalla.
+        showText("Comida: " + mj.comida, 200,50); //Registra el dato de comida recolectada y lo muestra en pantalla.
         showText(nombre, 200,100); //Muestra el nombre antes guardado en pantalla.
     }
 }

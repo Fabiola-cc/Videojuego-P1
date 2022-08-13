@@ -18,7 +18,6 @@ public class Minijuego extends World
      * Llama al método randomobj para colocar la comida y obstáculos alrededor del espacio.
      */
     public static int comida = 0;
-    Home data;
     Minijuego(String nombre, World link)
     {    
         super(1000, 600, 1); 
@@ -35,7 +34,6 @@ public class Minijuego extends World
      */
     public void act(){
         showText("Comida recolectada: " + comida, 200,50);
-        data.comida += comida;
     }
     
     /**
