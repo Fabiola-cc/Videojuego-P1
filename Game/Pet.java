@@ -1,27 +1,27 @@
 import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Pets here.
+ * El protagonista del juego, pet
+ * Obtiene un nombre y un lugar en el minijuego para mantenerse activo.
  * 
- * @author (your name)
- * @version (a version number or a date)
+ * @author Fabiola Contreras
+ * @version no.1
  */
 public class Pet extends Actor {
 
-    /**
-     * Act - do whatever the Pets wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     String nombre;
     boolean play= false;
     Minijuego MJ;
     int comida = 0;
     World link;
     
-    Pet() {
-        
-        }
+    Pet() {}
 
+    /**
+     * Pet- constructor con parámetros: nombre, play y world link
+     * Al crear un nuevo objeto, guarda cada dato recibido en las variables establecidas en el programa.
+     * Además, reduce el tamaño de la imagen del objeto a la mitad.
+     */
     Pet(String nombre, boolean play, World link) {
 
         GreenfootImage imagen = getImage();
@@ -32,6 +32,11 @@ public class Pet extends Actor {
         
     }
     
+    /**
+     * Act - Es llamado cada vez que el botón "run o act" es presionado.
+     * Se mueve cuando play es verdadera. Recibe y usa los métodos
+     * de golpe, recolecta y fin.
+     */
     public void act() {
         if (play == true){
           mover();  }
@@ -40,6 +45,12 @@ public class Pet extends Actor {
         fin();
     }
 
+    /**
+     * mover- llamado por act, cuando la variable play es establecida como verdadera.
+     * Cambia la posición continuamente 1 unidad a la derecha.
+     * Dependiendo de la tecla presionada, "pet" se mueve dos unidades abajo, arriba, 
+     * a la derecha o a la izquierda.
+     */
     public void mover() {
         setLocation(getX()+1, getY());
         if (Greenfoot.isKeyDown("up")) {
@@ -56,6 +67,13 @@ public class Pet extends Actor {
         }
     }
     
+    /**
+     * golpe - llamado por act.
+     * Recibe objetos de rama y roca.
+     * Al intersecarse (pet) con roca el recolector de comida resta 2 y
+     * al intersecarse (pet) con rama resta 1 elemento de comida.
+     * Además, se quita el objeto roca o rama del juego.
+     */
     public void golpe(){
         Actor Rama = getOneIntersectingObject (Rama.class);
         if (Rama != null){
@@ -66,11 +84,17 @@ public class Pet extends Actor {
         Actor Roca = getOneIntersectingObject (Roca.class);
         if (Roca != null){
             getWorld().removeObject(Roca);
-            MJ.comida --;
-            comida--;
+            MJ.comida -= 2;
+            comida -= 2;
         }
     }
     
+    /**
+     * recolecta - llamado por act.
+     * Recibe elementos de Comida
+     * Al intersecarse un objeto de comida con pet, se suma 1 al contador de comida recolectada.
+     * También se elimina el objeto de comida de la pantalla.
+     */
     public void recolecta(){
         Actor Food = getOneIntersectingObject (Comida.class);
         if (Food != null){
@@ -81,6 +105,11 @@ public class Pet extends Actor {
         }
     }
     
+    /**
+     * fin- llamado por act.
+     * Al llegar "pet" al borde derecho de la pantalla aparece el objeto fin y un contador de elementos de comida.
+     * Además establece el enlace en el objeto fin, para retornar a home.
+     */
     public void fin() {
         if (getX() == 999){
             getWorld().addObject(new fin(link), 500, 343);

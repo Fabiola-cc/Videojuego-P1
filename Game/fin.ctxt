@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=fin
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ fin\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Este\ objeto\ se\ muestra\ al\ final\ del\ minijuego.\r\n\ Sirve\ como\ bot\u00F3n\ para\ volver\ a\ home,\ al\ final.\r\n\ @author\ Fabiola\ Contreras\r\n\ @version\ no.1\r\n
 comment1.params=w1
 comment1.target=fin(greenfoot.World)
 comment2.params=

@@ -1,10 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Home here.
+ * Pantalla principal del juego.
+ * Presenta distintas opciones a realizar dentro del juego.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Fabiola Contreras
+ * @version no.1
  */
 public class Home extends World
 {
@@ -12,27 +13,30 @@ public class Home extends World
     String nombre;
     
     /**
-     * Constructor for objects of class Home.
+     * Constructor para Home.
+     * Muestra la imagen de pantalla.
+     * Crea una nueva mascota y nuevos mundos para ir.
      * 
      */
     public Home()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 600, 1);
         Pet p1 = new Pet();
-        addObject(p1, 372,494);
+        addObject(p1, 372,494); //Añade una mascota a la pantalla.
         
         MJ Play = new MJ(new Minijuego(nombre, this));
-        addObject (Play, 904, 76);
+        addObject (Play, 904, 76); //Botón para dirigirse al Minijuego.
     }
     
-    
+    /**
+     * Act - Es llamado cada vez que el botón "run o act" es presionado.
+     */
     public void act(){
         if (nombre == null){
             String nombre = Greenfoot.ask("¿Qué nombre deseas darle?");
-            this.nombre = nombre;
+            this.nombre = nombre; //Recibe un dato de nombre para la mascota.
         }
-        showText("Comida: " + comida, 200,50);
-        showText(nombre, 200,100);
+        showText("Comida: " + comida, 200,50); //Registra el dato de comida recolectada y lo muestra en pantalla.
+        showText(nombre, 200,100); //Muestra el nombre antes guardado en pantalla.
     }
 }

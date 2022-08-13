@@ -1,10 +1,12 @@
 #BlueJ class context
 comment0.target=Minijuego
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Minijuego\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Minijuego\ para\ distracci\u00F3n\r\n\ El\ objetivo\ es\ recolectar\ comida\ y\ evitar\ rocas\ y\ ramas.\r\n\ \r\n\ @author\ Fabiola\ Contreras\r\n\ @version\ no.1\r\n
 comment1.params=nombre\ link
 comment1.target=Minijuego(java.lang.String,\ greenfoot.World)
 comment2.params=
 comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ Es\ llamado\ cada\ vez\ que\ el\ bot\u00F3n\ "run\ o\ act"\ es\ presionado.\r\n\ Registra\ el\ dato\ de\ comida\ recolectada\ y\ lo\ guarda\ tambi\u00E9n\ en\ home.\r\n
 comment3.params=
 comment3.target=void\ randomobj()
+comment3.text=\r\n\ randomobj-\ llamado\ por\ el\ constructor\r\n\ Crea\ objetos\ de\ rama,\ roca\ y\ comida\ para\ el\ minijuego,\ colocandolos\ aleatoriamente\ en\ el\ espacio.\r\n
 numComments=4

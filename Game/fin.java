@@ -1,26 +1,22 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class fin here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+   * Este objeto se muestra al final del minijuego.
+   * Sirve como botón para volver a home, al final.
+   * @author Fabiola Contreras
+   * @version no.1
  */
 public class fin extends Actor
 {
-    /**
-     * Act - do whatever the fin wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    World link;
+    World link; //Guarda el dato para usarlo luego
     fin (World w1){
         this.link=w1;
     }
     
-    public void act()
+    public void act() //Al presionar el objeto, se redirige al mundo establecido
     {
         if (Greenfoot.mouseClicked(this)){
             Greenfoot.setWorld(this.link);
-        }   // Add your action code here.
+        }   
     }
 }

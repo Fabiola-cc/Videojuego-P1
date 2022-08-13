@@ -1,18 +1,24 @@
 #BlueJ class context
 comment0.target=Pet
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Pets\ here.\r\n\ \r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ El\ protagonista\ del\ juego,\ pet\r\n\ Obtiene\ un\ nombre\ y\ un\ lugar\ en\ el\ minijuego\ para\ mantenerse\ activo.\r\n\ \r\n\ @author\ Fabiola\ Contreras\r\n\ @version\ no.1\r\n
 comment1.params=
 comment1.target=Pet()
 comment2.params=nombre\ play\ link
 comment2.target=Pet(java.lang.String,\ boolean,\ greenfoot.World)
+comment2.text=\r\n\ Pet-\ constructor\ con\ par\u00E1metros\:\ nombre,\ play\ y\ world\ link\r\n\ Al\ crear\ un\ nuevo\ objeto,\ guarda\ cada\ dato\ recibido\ en\ las\ variables\ establecidas\ en\ el\ programa.\r\n\ Adem\u00E1s,\ reduce\ el\ tama\u00F1o\ de\ la\ imagen\ del\ objeto\ a\ la\ mitad.\r\n
 comment3.params=
 comment3.target=void\ act()
+comment3.text=\r\n\ Act\ -\ Es\ llamado\ cada\ vez\ que\ el\ bot\u00F3n\ "run\ o\ act"\ es\ presionado.\r\n\ Se\ mueve\ cuando\ play\ es\ verdadera.\ Recibe\ y\ usa\ los\ m\u00E9todos\r\n\ de\ golpe,\ recolecta\ y\ fin.\r\n
 comment4.params=
 comment4.target=void\ mover()
+comment4.text=\r\n\ mover-\ llamado\ por\ act,\ cuando\ la\ variable\ play\ es\ establecida\ como\ verdadera.\r\n\ Cambia\ la\ posici\u00F3n\ continuamente\ 1\ unidad\ a\ la\ derecha.\r\n\ Dependiendo\ de\ la\ tecla\ presionada,\ "pet"\ se\ mueve\ dos\ unidades\ abajo,\ arriba,\ \r\n\ a\ la\ derecha\ o\ a\ la\ izquierda.\r\n
 comment5.params=
 comment5.target=void\ golpe()
+comment5.text=\r\n\ golpe\ -\ llamado\ por\ act.\r\n\ Recibe\ objetos\ de\ rama\ y\ roca.\r\n\ Al\ intersecarse\ (pet)\ con\ roca\ el\ recolector\ de\ comida\ resta\ 2\ y\r\n\ al\ intersecarse\ (pet)\ con\ rama\ resta\ 1\ elemento\ de\ comida.\r\n\ Adem\u00E1s,\ se\ quita\ el\ objeto\ roca\ o\ rama\ del\ juego.\r\n
 comment6.params=
 comment6.target=void\ recolecta()
+comment6.text=\r\n\ recolecta\ -\ llamado\ por\ act.\r\n\ Recibe\ elementos\ de\ Comida\r\n\ Al\ intersecarse\ un\ objeto\ de\ comida\ con\ pet,\ se\ suma\ 1\ al\ contador\ de\ comida\ recolectada.\r\n\ Tambi\u00E9n\ se\ elimina\ el\ objeto\ de\ comida\ de\ la\ pantalla.\r\n
 comment7.params=
 comment7.target=void\ fin()
+comment7.text=\r\n\ fin-\ llamado\ por\ act.\r\n\ Al\ llegar\ "pet"\ al\ borde\ derecho\ de\ la\ pantalla\ aparece\ el\ objeto\ fin\ y\ un\ contador\ de\ elementos\ de\ comida.\r\n\ Adem\u00E1s\ establece\ el\ enlace\ en\ el\ objeto\ fin,\ para\ retornar\ a\ home.\r\n
 numComments=8

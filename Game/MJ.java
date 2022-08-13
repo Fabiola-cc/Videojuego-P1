@@ -1,23 +1,24 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Botón here.
+ * Se muestra en home. Permite al usuario ir al minijuego creado.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Fabiola Contreras
+ * @version no.1
  */
 public class MJ extends Actor
 {
-    /**
-     * Act - do whatever the Botón wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    World link;
+
+    World link; //Guarda el dato para usarlo luego
     MJ (World w1){
         this.link=w1;
     }
     
-    public void act()
+    /**
+     * Act - do whatever the Botón wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
+    public void act() //Al presionar el objeto, se redirige al mundo establecido
     {
         if (Greenfoot.mouseClicked(this)){
             Greenfoot.setWorld(this.link);
